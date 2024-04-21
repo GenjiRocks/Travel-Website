@@ -7,5 +7,315 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 
+}
+
+:root{
+    --yellow: rgb(226, 167, 5);
+    --heading: #151875
+}
+
+#header{
+    width: 100%;
+    /* height: 65px; */
+    /* position: fixed; */
+    z-index: 1;
+}
+
+.navbar{
+    background-color: black;
+    
+}
+
+.nav-item a{ 
+    color: white;
+    margin-right: 20px;
+    transition: ease-in 0.2s;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+.form button{
+   border-color: rgb(226, 167, 5);
+   border-radius: 50%;
+}
+
+/* Nav bar Hover  */
+.nav-item a:hover{
+    color: var(--yellow) ;
+}
+
+.form button:hover{
+    background-color: var(--yellow);
+}
+.form{
+    display: flex;
+}
+
+/* nav bar mobile screen */
+
+.custom-toggler.navbar-toggler {
+    border-color: var(--yellow);
+}
+
+.custom-toggler i{
+    color: var(--yellow);
+}
+
+@media(min-width:992px){
+    ul{
+         font-size: 16px;
+     }
+ }
+
+ @media(max-width:992px){
+
+    .bg h3{
+        padding-top: 200px !important;
+        padding-left: 40px !important;
+    }
+    .bg #h1explore{
+        padding-left: 40px !important;
+    }
+    
+
+    ul{
+        font-size: 14px;
+        display: none;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .form{
+        display: none;
+    }
+
+    .navbar-collapse{
+        display: block;
+    }
+
+    .bg {
+        background-size: cover; /* Ensures the background image covers the entire container */
+        background-position: center; /* Centers the background image */
+        height: 100vh; /* Sets the height of the background to the height of the viewport */
+        
+    }
+
+    #homeimage{
+        display: none;
+    }
+
+    
+    
+    
+
+
+}
+
+/* Home Section */
+
+.bg{
+    background-image: url('./Images/1.jpg');
+    filter: contrast(1.2);
+    width: 100%;
+    height: 1000px;
+    background-image:  no-repeat;
+    background-size: cover;
+}
+
+#home{
+    color: white;
+}
+
+.bg h3{
+    padding-top: 200px;
+    padding-left: 100px;
+    text-shadow: 0px 1px 1px black;
+}
+.bg #h1explore{
+    padding-left: 100px;
+    text-shadow: 0px 1px 1px black;
+}
+
+.changecontent{
+    content: '';
+    color: var(--yellow);
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+
+.changecontent::after{
+    content: '';
+    color: var(--yellow);
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+    0%{content: "France";}
+    10%{content: "Spain";}
+    20%{content: "United Kingdom";}
+    30%{content: "India";}
+    40%{content: "China";}
+    50%{content: "Germany";}
+    60%{content: "Korea";}
+    70%{content: "Japan";}
+    80%{content: "Italy";}
+    90%{content: "Africa";}
+    100%{content: "Mexico";}
+    
+}
+
+.bg p{
+    font-size: 20px;
+    text-shadow: 0px 1px 1px black;
+  
+}
+
+.bj{
+    border: 1px rgba(255, 0, 0, 0)  solid;
+    border-radius: 20px;
+    width: 250px;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    margin-left: 100px;
+    background-color: rgba(128, 128, 128, 0.404);
+    text-shadow: 0px 1px 1px black;
+    transition: ease-in 0.2s;
+    i{
+        transition: ease-out 0.2s;
+    }
+}
+
+.bj:hover{
+    background-color:rgba(202, 202, 202, 0.404) ;
+    i{
+        margin-left: 5px;
+    }
+}
+
+.dest-img1{
+    background-image: url("./Images/iceland.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 285px;
+}
+
+.dest-img2{
+    background-image: url("./Images/india.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 285px;
+}
+
+.dest-img3{
+    background-image: url("./Images/italy.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 285px;
+}
+
+.dest-img4{
+    background-image: url("./Images/singapore.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 285px;
+}
+
+
+
+.destn-name{
+    background-color: #fff;
+    margin-top: 108px;
+    border-radius: 17px;
+    height: 27px;
+    color: black;
+}
+
+/* Booking */
+
+#hotels h1{
+    color: var(--heading);
+
+ }
+.btn_hotel{
+    background-color: var(--yellow) !important;
+    color: black;
+    transition: 1s !important;
+    font-weight: 600 !important;
+}
+.btn_hotel:hover{
+transform: scale(1.1);
+background-color: var(--heading);
+    color: white;
+}
+
+/* services */
+#services{
+    width: 100%;
+}
+
+.home-bg1{
+    background-image: url("./Images/ser1.jpg");
+    width: 100%;
+    height: 586px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-bg2{
+    background-image: url("./Images/ser2.jpg");
+    width: 100%;
+    height: 586px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-bg3{
+    background-image: url("./Images/ser3.jpg");
+    width: 100%;
+    height: 586px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* about */
+#about{
+    width: 100%;
+    background: rgb(67,70,85);
+background: linear-gradient(177deg, rgba(67,70,85,1) 0%, rgba(29,51,57,1) 100%);
+}
+
+.about-head{
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--yellow);
+}
+
+#contact{
+    width: 100%;
+    font-size: 30px;
+    padding: 0px;
+    color:var(--yellow);
+    
+
+}
+
+.footlogo{
+    text-decoration: none;
+    color: var(--yellow);
+    
 }
